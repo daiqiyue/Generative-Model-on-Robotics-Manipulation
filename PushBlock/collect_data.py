@@ -36,9 +36,9 @@ class ManualCollectEnv:
     def reset(self):
         # reset robot to home position
         for i in range(7):
-        p.resetJointState(self.robot_id, i, self.home_joints[i])
-        p.resetJointState(self.robot_id, 9, 0.0)
-        p.resetJointState(self.robot_id, 10, 0.0)
+            p.resetJointState(self.robot_id, i, self.home_joints[i])
+            p.resetJointState(self.robot_id, 9, 0.0)
+            p.resetJointState(self.robot_id, 10, 0.0)
         # reset block to random position within a defined area
         rand_x = np.random.uniform(0.4, 0.6)
         rand_y = np.random.uniform(-0.25, -0.15)

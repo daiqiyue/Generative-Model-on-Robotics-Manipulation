@@ -9,7 +9,7 @@ def merge_datasets(file_list, output_name="merged_data.npz"):
     
     for filename in file_list:
         if not os.path.exists(filename):
-            print(f"⚠️ Warning: {filename} not found, skipping.")
+            print(f"Warning: {filename} not found, skipping.")
             continue
             
         data = np.load(filename)
